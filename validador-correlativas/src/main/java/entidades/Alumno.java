@@ -6,44 +6,49 @@ import java.util.List;
 public class Alumno {
 
 	private String nombre;
-	private String legajo;
-	private List<Materia> materiasAprobadas;
-	
-	public Alumno() {
-		this.materiasAprobadas = new ArrayList<Materia>();
-	}
-	
-	public Alumno(String nombre, String legajo) {
-		super();
-		this.nombre = nombre;
-		this.legajo = legajo;
-		this.materiasAprobadas = new ArrayList<Materia>();
-	}
-	
-	
-	public String getNombre() {
-		return nombre;
-	}
+    private String legajo;
+    private List<Materia> materiasAprobadas;
 
-	public void setNombre(String nombre) {
-		this.nombre = nombre;
-	}
+    public Alumno() {
+    }
 
-	public String getLegajo() {
-		return legajo;
-	}
+    public Alumno(String nombre, String legajo) {
+        this.nombre = nombre;
+        this.legajo = legajo;
+        this.materiasAprobadas = new ArrayList<Materia>();
+    }
 
-	public void setLegajo(String legajo) {
-		this.legajo = legajo;
-	}
+    public Alumno(String nombre, String legajo, List<Materia> materiasAprobadas) {
+        this.nombre = nombre;
+        this.legajo = legajo;
+        this.materiasAprobadas = materiasAprobadas;
+    }
 
-	public List<Materia> getMateriasAprobadas() {
-		return materiasAprobadas;
-	}
+    public String getNombre() {
+        return nombre;
+    }
 
-	public void setMateriasAprobadas(Materia materia) {
-		materiasAprobadas.add(materia);
-	}
-	
-	
+    public void setNombre(String nombre) {
+        this.nombre = nombre;
+    }
+
+    public String getLegajo() {
+        return legajo;
+    }
+
+    public void setLegajo(String legajo) {
+        this.legajo = legajo;
+    }
+
+    public List<Materia> getMateriasAprobadas() {
+        return materiasAprobadas;
+    }
+
+    public void setMateriasAprobadas(List<Materia> materiasAprobadas) {
+        this.materiasAprobadas = materiasAprobadas;
+    }
+
+    public void agregarMateriaAprobada(Materia materia) {
+        materiasAprobadas.add(materia);
+    }
 }
